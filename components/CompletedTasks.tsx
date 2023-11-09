@@ -10,7 +10,7 @@ type tasks = {
 const getTasks = async () => {
     try {
         const res=await fetch("http://localhost:3000/api/tasks", {
-            cache:"no-store"
+            next:{revalidate:5}
         })
         if (!res.ok) {
             throw new Error("Failed to fetch data")
@@ -26,18 +26,18 @@ export default async function CompletedTasksList() {
     const data = await getTasks()
     const allTasks= data.tasks
     
-    return (<div>
-        <h1>All tasks</h1>
-        <ul>
+    return (<div className="cont">
+        <ul className="list">
             {allTasks.filter((t:tasks)=>t.completed).map((t:tasks,i:number) => {
                 return (
                     <li key={i}>
-                        <p><b>{t.title}</b></p>
-                        <p>{t.description}</p>
                         <div>
+                        <p><b>{t.title}</b></p>
+                           <div className="tags">
                             <RemoveBtn id={t._id} />
-                            {/* <EditTask id={t._id} title={t.title} description={t.description} /> */}
+                            </div>
                         </div>
+                        <p className="des">{t.description}</p>
                    </li>
                 )
             })}

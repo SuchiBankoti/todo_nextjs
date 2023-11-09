@@ -25,6 +25,54 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-input{
+.cont{
+  padding: 10px 15px;
+}
+.input{
   color: black;
+  margin: 10px;
+}
+.list{
+  list-style-type: disc;
+}
+li{
+  color: aliceblue;
+  border: 1px solid white;
+  width: 100%;
+}
+li>div{
+  display: flex;
+  
+}
+.tags{
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  margin-left: 100px;
+}
+.tags>div{
+  display: flex;
+}
+.des{
+  font-size: 12px;
+}
+.nav{
+  display: flex;
+  height: 60px;
+  background-color: white;
+  color: black;
+  gap:20px;
+  padding: 10px 15px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+.btn{
+  background-color: white;
+  color: black;
+  width: 120px;
+  height: 30px;
+  margin: 20px 15px;
 }

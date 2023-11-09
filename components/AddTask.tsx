@@ -38,11 +38,12 @@ export default function AddTask() {
         }
     }
     return (
-        <div>
-            <form>
+        <div className="cont">
+            <form className="form">
                 <label>
                     Title
                     <input
+                        className="input"
                     type="text"
                     name="title"
                     placeholder="Title"
@@ -53,6 +54,7 @@ export default function AddTask() {
                 <label>
                     Description
                     <input
+                        className="input"
                     type="text"
                     name="description"
                     placeholder="Description"
@@ -61,7 +63,7 @@ export default function AddTask() {
                     />
                 </label>
             </form>
-            <button onClick={handleSubmit}>Add</button>
+            <button onClick={handleSubmit} className="btn">Add</button>
         </div>
     )
 }
