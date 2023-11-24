@@ -38,10 +38,11 @@ export default function AddTask() {
         }
     }
     return (
-        <div className="cont">
+        <div className="container">
             <form className="form">
                 <label>
                     Title
+                </label>
                     <input
                         className="input"
                     type="text"
@@ -50,9 +51,9 @@ export default function AddTask() {
                     value={formData.title}
                     onChange={handleChange}
                     />
-                </label>
                 <label>
                     Description
+                </label>
                     <input
                         className="input"
                     type="text"
@@ -61,7 +62,6 @@ export default function AddTask() {
                     value={formData.description}
                     onChange={handleChange}
                     />
-                </label>
             </form>
             <button onClick={handleSubmit} className="btn">Add</button>
         </div>

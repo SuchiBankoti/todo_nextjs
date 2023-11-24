@@ -40,8 +40,8 @@ export default function EditTask({id,title,description}:tasks) {
         setIsChecked(!isChecked);
     }
     return (
-        <div>
-            <p>Mark as complete</p>
+        <div className="markbox">
+            <p className="mark-text">Mark as complete</p>
             <input
                 type="checkbox"
                 checked={isChecked}
