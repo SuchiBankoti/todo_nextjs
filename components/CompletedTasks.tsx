@@ -9,8 +9,8 @@ type tasks = {
 
 const getTasks = async () => {
     try {
-        const res=await fetch("http://localhost:3000/api/tasks", {
-            next:{revalidate:2}
+        const res=await fetch(`${process.env.NEXT_PUBLIC_URL_AUTH}/api/tasks`, {
+            next:{revalidate:10}
         })
         if (!res.ok) {
             throw new Error("Failed to fetch data")

@@ -7,7 +7,7 @@ type tasks = {
     "description":string
 }
 
-
+console.log("add taskurl",process.env.NEXT_PUBLIC_URL_AUTH)
 
 export default function AddTask() {
     const [formData, setFormData] = useState({
@@ -24,7 +24,7 @@ export default function AddTask() {
       return
   }
         try {
-           const res= await fetch('http://localhost:3000/api/tasks', {
+           const res= await fetch(`${process.env.NEXT_PUBLIC_URL_AUTH}/api/tasks`, {
                 method: "POST",
                 headers: {
                     "Content-Type":"application/json",
@@ -32,6 +32,7 @@ export default function AddTask() {
                 body: JSON.stringify(formData)
             })   
             if (res.ok) {
+                alert("task added")
         }    
         } catch (error) {
             console.log(error)
