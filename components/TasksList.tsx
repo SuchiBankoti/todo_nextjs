@@ -7,11 +7,11 @@ type tasks = {
     "description": string,
     "completed":boolean
 }
-console.log("all taskurl", process.env.NEXT_PUBLIC_URL_AUTH)
+console.log("all taskurl", process.env.https://suchibankoti.github.io/todo_nextjs/)
 
 const getTasks = async () => {
     try {
-        const res=await fetch(`${process.env.NEXT_PUBLIC_URL_AUTH}/api/tasks`, {
+        const res=await fetch(`${process.env.https://suchibankoti.github.io/todo_nextjs/}/api/tasks`, {
             next:{revalidate:10}
         })
         if (!res.ok) {

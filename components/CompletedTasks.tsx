@@ -9,7 +9,7 @@ type tasks = {
 
 const getTasks = async () => {
     try {
-        const res=await fetch(`${process.env.NEXT_PUBLIC_URL_AUTH}/api/tasks`, {
+        const res=await fetch(`${process.env.https://suchibankoti.github.io/todo_nextjs/}/api/tasks`, {
             next:{revalidate:10}
         })
         if (!res.ok) {

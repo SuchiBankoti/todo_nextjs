@@ -7,7 +7,7 @@ export default function RemoveBtn({ id }: { id: string }) {
         const confirmed = confirm('are you sure?')
         
         if (confirmed) {
-            const res=await fetch(`${process.env.NEXT_PUBLIC_URL_AUTH}/api/tasks?id=${id}`, {
+            const res=await fetch(`${process.env.https://suchibankoti.github.io/todo_nextjs/}/api/tasks?id=${id}`, {
                 method:"DELETE"
             })
             if (res.ok) {

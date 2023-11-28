@@ -22,7 +22,7 @@ export default function EditTask({id,title,description}:tasks) {
         const confirmed = confirm('are you sure?')
         
         if (confirmed) {
-            const res=await fetch(`${process.env.NEXT_PUBLIC_URL_AUTH}/api/tasks/${id}`, {
+            const res=await fetch(`${process.env.https://suchibankoti.github.io/todo_nextjs/}/api/tasks/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type":"application/json"
