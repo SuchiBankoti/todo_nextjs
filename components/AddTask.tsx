@@ -7,7 +7,6 @@ type tasks = {
     "description":string
 }
 
-console.log("add taskurl",process.env.https://suchibankoti.github.io/todo_nextjs/)
 
 export default function AddTask() {
     const [formData, setFormData] = useState({
@@ -24,7 +23,7 @@ export default function AddTask() {
       return
   }
         try {
-           const res= await fetch(`${process.env.https://suchibankoti.github.io/todo_nextjs/}/api/tasks`, {
+           const res= await fetch(`https://suchibankoti.github.io/todo_nextjs/api/tasks`, {
                 method: "POST",
                 headers: {
                     "Content-Type":"application/json",
